@@ -1,3 +1,31 @@
+html,
+body {
+  font-family: "CustomFont", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(232, 232, 232);
+  text-align: center;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  height: 100%; /* Ensure body stretches full height */
+}
+
+body {
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.main {
+  max-height: calc(100vh - 70px); /* Limit height of the main content */
+  overflow-y: auto; /* Make content scrollable */
+}
+
+/* For small screen responsiveness */
+@media only screen and (max-width: 768px) {
+  .main {
+    max-height: calc(100vh - 120px); /* Adjust for smaller header/footer */
+  }
+}
+
+
 @font-face {
     font-family: "CustomFont";
     src: url("fonts/FSEmeric-Book.otf") format("opentype");
