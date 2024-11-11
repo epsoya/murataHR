@@ -1,15 +1,23 @@
 /* Base styles */
-html,
-body {
+html {
   font-family: "CustomFont", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: rgb(232, 232, 232);
   text-align: center;
   overflow-x: hidden; /* Hide horizontal overflow */
-  height: 100%; /* Ensure body stretches full height */
+  height: 100%; /* Full height */
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Allow page to be scrollable */
+}
+
+/* Header styling */
 header {
   display: flex;
   background-color: #ffffff;
@@ -30,6 +38,7 @@ p {
   margin: 0;
 }
 
+/* Main content styling */
 .main {
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -39,8 +48,7 @@ p {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 70px); /* Limit height of the main content */
-  overflow-y: auto; /* Make content scrollable */
+  overflow-y: auto; /* Enable scroll for the main content */
 }
 
 /* For smaller screens (mobile) */
@@ -58,7 +66,6 @@ p {
   .main {
     margin: 10px;
     padding: 10px;
-    max-height: calc(100vh - 120px); /* Adjust for smaller header/footer */
   }
 }
 
@@ -77,101 +84,38 @@ p {
   }
 }
 
+/* Custom font */
 @font-face {
-    font-family: "CustomFont";
-    src: url("fonts/FSEmeric-Book.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  html,
-  body {
-    font-family: "CustomFont", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(232, 232, 232);
-    text-align: center;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  header {
-    display: flex;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    height: 50px;
-    padding: 0 10px;
-    flex-shrink: 0;
-  }
-  
-  header img {
-    max-height: 30px;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  p {
-    margin: 0;
-  }
-  
-  .text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #ea002a;
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: auto;
-  }
-  
-  .buttons a {
-    text-decoration: none;
-    width: 90%;
-    padding: 10px;
-    border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  
-  .buttons a:first-of-type {
-    color: #ffffff;
-    background-color: #ea002a;
-    border: 1px solid #ea002a;
-  }
-  
-  .buttons a:last-of-type {
-    border: 1px solid #ea002a;
-  }
-  
-  main {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main img {
-    border-radius: 20px;
-  }
-  
+  font-family: "CustomFont";
+  src: url("fonts/FSEmeric-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Additional styling for buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.buttons a {
+  text-decoration: none;
+  width: 90%;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.buttons a:first-of-type {
+  color: #ffffff;
+  background-color: #ea002a;
+  border: 1px solid #ea002a;
+}
+
+.buttons a:last-of-type {
+  border: 1px solid #ea002a;
+}
