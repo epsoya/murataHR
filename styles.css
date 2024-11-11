@@ -30,10 +30,6 @@ header {
   gap: 20px; /* Adds space between items */
 }
 
-header img {
-  max-height: 30px; /* Ensures images fit within the header */
-}
-
 h1 {
   margin: 0;
 }
